@@ -1,0 +1,6 @@
+{
+	"name": "file1",
+	"content": "/*\n * Some Comment here\n * \n */ \nfunction foo(items) {\n    var i;\n    for (i = 0; i &lt; items.length; i++) {\n        alert(\"Ace Rocks \" + items[i]);\n    }\n}",
+	"size": 100,
+	"version": "2012-09-06 14:21:30"
+}

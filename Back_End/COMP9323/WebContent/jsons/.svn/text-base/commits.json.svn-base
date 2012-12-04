@@ -1,0 +1,35 @@
+{
+	"repo": "Assignment 1",
+	"commits": [
+	    {
+	        "date": "2012-09-06 14:21:30",
+	        "numberofchanges": 2,
+	        "changes": [
+	            {"name": "file1", "sha": "e123456"},
+	            {"name": "file2", "sha": "e123456"}
+	        ],
+	        "message": "a message from author",
+	        "authoredby": "szha246"
+	    },
+	    {
+	        "date": "2012-09-05 08:33:41",
+	        "numberofchanges": 1,
+	        "changes": [
+	            {"name": "file3", "sha": "e123456"}
+	        ],
+	        "message": "a message from author",
+	        "authoredby": "szha246"
+	    },
+	    {
+	        "date": "2012-09-04 12:34:27",
+	        "numberofchanges": 3,
+	        "changes": [
+	            {"name": "file1", "sha": "e123456"},
+	            {"name": "file2", "sha": "e123456"},
+	            {"name": "file3", "sha": "e123456"}
+	        ],
+	        "message": "a message from author",
+	        "authoredby": "szha246"
+	    }
+	]
+}

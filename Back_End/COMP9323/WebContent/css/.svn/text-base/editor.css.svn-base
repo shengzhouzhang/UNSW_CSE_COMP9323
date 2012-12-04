@@ -1,0 +1,123 @@
+/*
+	Commits.html CSS file
+*/
+
+/* = Editor
+--------------------------------------------------------------------------------*/
+
+editorheader, editorfooter, title
+{
+	display: block;
+}
+
+status, rows, cancel, submit
+{
+	display: inline-block;
+}
+
+pages pre 
+{ 
+    margin: 42px auto 0 auto;
+    height: 1800px;
+    position: relative;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    line-height: 20px;
+    text-align: left;
+    background-color: white;
+    border-bottom: 3px solid #C5D5DD;
+}
+
+editorheader
+{
+	margin: 0 auto 0 auto;
+	padding: 5px 10px 8px 10px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 3px solid #C5D5DD;
+    background: -moz-linear-gradient(#FCFCFC, #E6F1F6);
+	background: -webkit-linear-gradient(#FCFCFC, #E6F1F6);
+}
+
+status
+{
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	border-right: 1px solid #E8E8E8;
+	position: relative;
+}
+
+status.readonly
+{
+	color: #1DA237;
+}
+
+status.editing
+{
+	color: #FF9912;
+}
+
+rows
+{
+	padding: 5px 10px 5px 10px;
+	width: 100px;
+	text-align: center;
+	border-right: 1px solid #E8E8E8;
+	position: relative;
+}
+
+editorheader ul
+{
+	text-align: right;
+	display: inline-block;
+	position: relative;
+	float: right;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+}
+
+editorheader li
+{
+	margin-right: 10px;
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid #E8E8E8;
+	display: inline-block;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-origin: padding-box;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+editorheader li:hover
+{
+	color: #FFFFFF;
+	text-shadow: rgba(0, 0, 0, 0.296875) 0px -1px 0px;
+	cursor: pointer;
+	border-top: 1px solid #518CC6;
+	border-bottom: 1px solid #2A65A0;
+	background-image: -webkit-linear-gradient(top, #599BDC, #3072B3);
+}
+
+editorfooter
+{
+	width: 55%;
+	text-align: left;
+	padding: 0 0 50px 0;
+}
+
+title
+{
+	padding: 20px 10px 10px 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+editorfooter input
+{
+	width: 100%;
+	padding: 7px;
+}

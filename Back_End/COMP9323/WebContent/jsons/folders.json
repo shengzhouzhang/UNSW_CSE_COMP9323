@@ -1,0 +1,32 @@
+{
+	"folders":[
+	{
+		"path": "CS9323/Assign1",
+		"fileid": "0"
+	},
+	{
+		"path": "CS9323/Assign1/folder1",
+		"fileid": "1"
+	},
+	{
+		"path": "CS9323/Assign1/folder1/Subfolder1",
+		"fileid": "6"
+	},
+	{
+		"path": "CS9323/Assign1/folder1/Subfolder1/Subfolder3",
+		"fileid": "11"
+	},
+	{
+		"path": "CS9323/Assign1/folder1/Subfolder1/Subfolder4",
+		"fileid": "12"
+	},
+	{
+		"path": "CS9323/Assign1/folder1/Subfolder2",
+		"fileid": "7"
+	},
+	{
+		"path": "CS9323/Assign1/folder2",
+		"fileid": "2"
+	}
+	]
+}

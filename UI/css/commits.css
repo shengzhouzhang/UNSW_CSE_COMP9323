@@ -1,0 +1,381 @@
+/*
+	Commits.html CSS file
+*/
+
+/* = Commit
+--------------------------------------------------------------------------------*/
+
+.upload
+{
+	margin: 10px auto 20px auto;
+	width: 90%;
+	border: 1px solid #E8E8E8;
+	background-color: #FFFFFF;
+}
+
+.upload img
+{
+	width: 80px;
+	height: 80px;
+	border: 1px solid #E8E8E8;
+}
+
+.upload .image
+{
+	padding: 10px;
+}
+
+.upload table
+{
+	width: 100%;
+}
+
+.upload tr
+{
+	width: 100%;
+}
+
+.upload .header
+{
+	padding: 5px 10px 5px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: left;
+	border-bottom: 1px solid #E8E8E8;
+	width: 100%;
+}
+
+.upload .message
+{
+	width: 90%;
+	text-align: left;
+}
+
+.upload .message div
+{
+	font-weight: bold;
+	font-size: small;
+	padding: 5px 10px 5px 10px;
+}
+
+.upload .message input
+{
+	width: 95%;
+	padding: 7px;
+}
+
+.upload button
+{
+	width: 80px;
+	height: 80px;
+}
+
+.upload .button
+{
+	width: 10%;
+}
+
+/* = Commit
+--------------------------------------------------------------------------------*/
+
+.commits
+{
+	margin: 30px auto 20px auto;
+	width: 93%;
+}
+
+.commits > li
+{
+	margin: 20px 0 0 0;
+	display: none;
+	cursor: auto;
+	background-color: #FFFFFF;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+}
+
+.commits > li > div
+{
+	padding: 3px 10px 3px 10px;
+	text-align: left;
+	border-left: 1px solid #C5D5DD;
+	border-right: 1px solid #C5D5DD;
+}
+
+.commits > li > div:first-child
+{
+	padding: 5px 10px 5px 10px;
+	font-weight: bold;
+	background: #E6F1F6;
+	border-top: 1px solid #C5D5DD;
+	border-bottom: 1px solid #C5D5DD;
+	color: #3A505B;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.commits > li >  div > div:nth-child(even)
+{
+	/* background: #FFFFDD; */
+}
+
+.authoredby
+{
+	font-size: 12px;
+	color: #888;
+}
+
+.author
+{
+	margin-right: 5px;
+	font-size: 12px;
+	color: #888;
+}
+
+div.changes
+{
+	line-height: 18px;
+	font-size: 13px;
+}
+
+div.changes > span.version
+{
+	font-weight: normal;
+	font-size: 12px;
+	font-family: Monaco, 'Liberation Mono', Courier, monospace;
+	text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 0px;
+}
+
+div.changes > span.commitdate
+{
+	margin-left: 5px;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+}
+
+div.changes > span.commit
+{
+	margin-left: 20px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Monaco, 'Liberation Mono', Courier, monospace;
+	text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 0px;
+	display: none;
+}
+
+div.changes > span.displaysha
+{
+	margin-left: 10px;
+	font-size: 11px;
+	font-weight: normal;
+	font-family: Monaco, 'Liberation Mono', Courier, monospace;
+	/* font-weight: normal; */
+	color: #444;
+	text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 0px;
+	display: none;
+}
+
+.inlineblock
+{
+	display: inline-block;
+	cursor: auto;
+}
+
+.inlineblock li
+{
+	cursor: auto;
+}
+
+.commits > li > div li.commitmargin
+{
+	line-height: 18px;
+}
+
+.commits > li > div li.changes
+{
+	line-height: 24px;
+}
+
+.commits div.commititem a.floatright
+{
+	float: right;
+}
+
+.commits > li > div.commititem
+{
+	padding: 6px 10px 6px 10px;
+	border-bottom: 1px solid #C5D5DD;
+}
+
+.commits > li > div.commititem:nth-child(odd)
+{
+	background-color: #F7FBFC;
+}
+
+.commits > li > div.commititem:last-child
+{
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.commits > li > div.commititem:hover
+{
+	background-color: #FCFCE2;
+}
+
+.changes > a:hover
+{
+	text-decoration: underline;
+}
+
+.changes > a.floatright
+{
+	float: right;
+	text-decoration: none;
+}
+
+.changes > a.revert
+{
+	color: #3A505B;
+	font-size: 13px;
+}
+
+.changes > span.foldername
+{
+	font-weight: bold;
+}
+
+.changes > span.commitoperation
+{
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	font-weight: bold;
+	color: #444;
+}
+
+.changes > a.openfile
+{
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	font-weight: bold;
+	color: #444;
+}
+
+.changes > span.viewchanges
+{
+	cursor: pointer;
+	padding: 0 7px 0 7px;
+	width: 90px;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+	background-origin: padding-box;
+	color: #4E575B;
+	line-height: 22px;
+	font-family: Monaco, 'Liberation Mono', Courier, monospace;
+	text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 0px;
+	font-size: 11px;
+	border-radius: 3px;
+	overflow: hidden;
+	float: right;
+	display: inline-block;
+	background-color: #EFF6F9;
+	border: 1px solid #CEDEE5;
+}
+
+.changes > span.viewchanges > span.numOfComments
+{
+	color: #4E575B;
+	margin-right: 10px;
+	padding-right: 7px;
+	text-align: center;
+	width: 22px;
+	font-size: 12px;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 0px;
+	font-weight: bold;
+	line-height: 22px;
+	display: inline-block;
+	border-right: 1px solid #CEDEE5;
+}
+
+/* .changes > span.viewchanges:nth-child(even)
+{
+	border: 1px solid #CEDEE5;
+	background: -webkit-linear-gradient(#EFF6F9, #DDECF3);
+}
+
+.changes > span.viewchanges:nth-child(odd)
+{
+	border: 1px solid #D5DCDF;
+	background-image: -webkit-linear-gradient(top, #F2F5F6, #E3EAED);
+} */
+
+/* span.viewchangesselected
+{
+	padding: 0 7px 0 7px;
+	width: 90px;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+	background-origin: padding-box;
+	color: #4E575B;
+	line-height: 22px;
+	font-size: 11px;
+	font-family: Monaco, 'Liberation Mono', Courier, monospace;
+	text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 0px;
+	border-radius: 3px;
+	overflow: hidden;
+	float: right;
+	display: inline-block;
+	background-image: -webkit-linear-gradient(top, #F9FAC9, #F3F494);
+	border: 1px solid #E7E86D;
+} */
+
+a.browsecode
+{
+	margin-top: 5px;
+	font-weight: bold;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	color: #999;
+	font-size: 11px;
+	margin-right: 10px;
+}
+
+a.browsecode:hover
+{
+	text-decoration: underline;
+}
+
+.commit li:not(:first-child)
+{
+	border-top: 1px solid #E8E8E8;
+}
+
+.commit li:nth-child(even)
+{
+	/* background: #F5FFFA; */
+}
+
+.commit img
+{
+	height: 50px;
+	width: 50px;
+}
+
+.commit .file_1
+{
+	width: 100%;
+	text-align: left;
+}
+
+.commit .file_1 .name a
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #666666;
+}
+
+.commit .file_1 .user
+{
+	font-size: 10px;
+}
+
+img.forward
+{
+	width: 18px;
+	height: 18px;
+	float: right;
+}

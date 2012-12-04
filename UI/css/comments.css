@@ -1,0 +1,167 @@
+/*
+	Comments CSS file
+*/
+
+/* = Comments
+--------------------------------------------------------------------------------*/
+
+commentheader, writer, commentfooter
+{
+	display: block;
+}
+
+writer
+{
+	margin: 20px auto 20px auto;
+	width: 93%;
+	text-align: left;
+	border: 3px solid #E8E8E8;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	display: none;
+}
+
+commentheader
+{
+	margin-left: 10px;
+	padding: 10px 20px 10px 20px;
+	font-weight: bold;
+}
+
+writer > textarea
+{
+	margin: 10px 0 10px 0;
+	width: 680px;
+	height: 100px;
+	padding: 5px;
+	line-height: 20px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	border: 1px solid #E8E8E8;
+}
+
+writer > textarea:focus
+{
+	outline-color: #33CCFF;
+}
+
+commentfooter
+{
+	
+}
+
+cancel
+{
+	margin: 10px;
+	color: #660033;
+	border: 1px solid #E8E8E8;
+}
+
+submit
+{
+	margin: 10px;
+	border: 1px solid #E8E8E8;
+}
+
+.button
+{
+	width: 100px;
+	padding: 10px;
+	font-size: small;
+	font-weight: bold;
+	text-align: center;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	cursor: pointer;
+	background: -moz-linear-gradient(#FAFAFA, #CAE1FF);
+	background: -webkit-linear-gradient(#FAFAFA, #CAE1FF);
+}
+
+.button:hover
+{
+	background-color: #ECECEC;
+	background: -moz-linear-gradient(#CAE1FF, #FAFAFA);
+	background: -webkit-linear-gradient(#CAE1FF, #FAFAFA);
+}
+
+.comments
+{
+	width: 100%;
+	text-align: left;
+}
+
+ul.comments
+{
+	margin: 20px auto 20px auto;
+	width: 93%;
+}
+
+.comments > li
+{
+	margin-top: 20px;
+	width: 100%;
+	display: block;
+	cursor: auto;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+}
+
+.comments > li > div.header
+{
+	padding-top: 2px;
+	height: 26px;
+	border: 1px solid #C5D5DD;
+	background-color: #E6F1F6;
+	color: #3A505B;
+}
+
+.comments > li > p
+{
+	border-left: 1px solid #C5D5DD;
+	border-right: 1px solid #C5D5DD;
+	border-bottom: 1px solid #C5D5DD;
+}
+
+.comments > li > div > span
+{
+	margin: 5px 10px 5px 0;
+	float: left;
+}
+
+.comments > li > div > span.author
+{
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.comments > li > div > span.file
+{
+	font-weight: bold;
+}
+
+.comments > li > div > span.row
+{
+	font-weight: bold;
+}
+
+.comments > li > div > span.row:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.comments > li > div > span.date
+{
+	font-weight: bold;
+	float: right;
+}
+
+.comments > li > div > span.hidden
+{
+	display: none;
+}
+
+.comments > li > p
+{
+	padding: 10px;
+	background-color: white;
+}

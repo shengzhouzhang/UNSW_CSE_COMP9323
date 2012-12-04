@@ -1,0 +1,92 @@
+ul.comments
+{
+	
+}
+
+ul.comments li
+{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+ul.comments span.repoGroup
+{
+	cursor: pointer;
+}
+
+ul.comments span.repoGroup:hover
+{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#createGrp b
+{
+	padding: 10px 20px 10px 20px;
+	background-color: #518CC6;
+	color: white;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#createGrp b:hover
+{
+	background-color: #2A65A0;
+}
+
+
+#creategroup { 
+width: 100%; 
+padding: 0; 
+margin: 0;
+display: none;
+}
+
+#creategroup table 
+{ 
+	border-top: 1px solid #C5D5DD;
+	width: 700px;
+	margin: 10px auto 0 auto;
+}
+
+#creategroup table th
+{ 
+	padding: 10px;
+	background-color: #E6F1F6;
+}
+
+#creategroup table td
+{ 
+	border-top: 1px solid #C5D5DD;
+}
+
+#creategroup table td
+{ 
+	padding: 7px 10px 6px 10px;
+}
+
+#creategroup table input
+{ 
+	padding: 2px;
+	font-size: 12px;
+	width: 200px;
+} 
+
+#creategroup th { 
+font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; 
+color: #4f6b70; 
+letter-spacing: 2px; 
+text-transform: uppercase; 
+text-align: left; 
+padding: 6px 6px 6px 12px;  
+} 
+
+#creategroup td { 
+padding: 6px 6px 6px 12px; 
+} 
+
+#creategroup th.spec { 
+
+} 

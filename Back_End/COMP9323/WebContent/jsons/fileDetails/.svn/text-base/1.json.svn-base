@@ -1,0 +1,36 @@
+{
+	"path": "CS9323/Assign1/folder1",
+	"user": "szha246",
+	"files": [
+		{
+			"sha": "6",
+			"name": "Subfolder1",
+			"size": "100",
+			"type": "folder"
+		},
+		{
+			"sha": "7",
+			"name": "Subfolder2",
+			"size": "100",
+			"type": "folder"
+		},
+		{
+			"sha": "8",
+			"name": "file8",
+			"size": "100",
+			"type": "file"
+		},
+		{
+			"sha": "9",
+			"name": "file9",
+			"size": "100",
+			"type": "file"
+		},
+		{
+			"sha": "10",
+			"name": "file10",
+			"size": "100",
+			"type": "file"
+		}
+	]
+}

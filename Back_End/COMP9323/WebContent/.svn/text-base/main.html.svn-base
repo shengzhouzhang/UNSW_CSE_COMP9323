@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>UNSW GitHub</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/client.css" />
+<link type="text/css" href="css/redmond/jquery-ui-1.8.23.custom.css" rel="Stylesheet" />	
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+<script src="ace/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.rest.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/framework.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/tabs.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/commits.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/editor.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/theme.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/comment.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/login.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/rest.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/repo.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/group.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/progressbar.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/messagebox.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/date.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/files.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.DOMWindow.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/dateformat.js" type="text/javascript" charset="utf-8"></script>
+<!-- <link rel="stylesheet" href="css/downloader.css"> -->
+</head>
+<body>
+	<content>
+		<left>
+			<logo>
+				UNSW GitHub
+			</logo>
+			<nav>
+				<ul></ul>
+			</nav>
+		</left>
+		<right>
+			<main>
+				<tabs>
+					<ul></ul>
+					<margin>
+					</margin>
+				</tabs>
+				<pages>
+	
+				</pages>
+			</main>
+		</right>
+	</content>
+	<img id="progressbar" src="images/loader.gif">
+	<div class="modal" ></div>
+	<div class="messagebox" ></div>
+	
+</body>
+</html>

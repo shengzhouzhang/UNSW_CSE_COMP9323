@@ -1,0 +1,277 @@
+/*
+	Commits.html CSS file
+*/
+
+/* = Editor
+--------------------------------------------------------------------------------*/
+
+editorheader, editorfooter, title
+{
+	display: block;
+}
+
+status, rows, cancel, submit
+{
+	display: inline-block;
+}
+
+pages pre 
+{ 
+    /* margin: 42px auto 0 auto; */
+    margin: 0 20px 0 20px;
+    border-left: 3px solid #EEE;
+    border-right: 3px solid #EEE;
+    border-bottom: 3px solid #EEE;
+    height: 1800px;
+    position: relative;
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    line-height: 16px;
+    text-align: left;
+    background-color: #FBFBFB;
+    white-space: pre;
+    color: black;
+}
+
+editorheader
+{
+	margin: 0 20px 0 20px;
+	padding: 7px 10px 8px 10px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+    /* position: fixed; */
+    z-index: 100;
+    border-top: 3px solid #EEE;
+    border-left: 3px solid #EEE;
+    border-right: 3px solid #EEE;
+    border-bottom: 1px solid #C5D5DD;
+    /* background: -moz-linear-gradient(#FCFCFC, #E6F1F6);
+	background: -webkit-linear-gradient(#FCFCFC, #E6F1F6); */
+	background: -moz-linear-gradient(#FAFAFA, #EAEAEA);
+	background: -webkit-linear-gradient(#FAFAFA, #EAEAEA);
+	font-size: 12px;
+	text-shadow: white 0px 1px 0px;
+}
+
+status
+{
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	border-right: 1px solid #E8E8E8;
+	position: relative;
+}
+
+status.readonly
+{
+	color: #1DA237;
+}
+
+status.editing
+{
+	color: #FF9912;
+}
+
+rows
+{
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	border-right: 1px solid #E8E8E8;
+	position: relative;
+}
+
+editorheader span.sha
+{
+	padding: 5px 10px 5px 10px;
+	width: 100px;
+	font-size: 12px;
+	text-align: center;
+	font-weight: normal;
+	border-right: 1px solid #E8E8E8;
+	position: relative;
+}
+
+editorheader span.version
+{
+	padding: 5px 10px 5px 10px;
+	width: 100px;
+	font-size: 12px;
+	text-align: center;
+	font-weight: normal;
+	border-right: 1px solid #E8E8E8;
+	position: relative;
+}
+
+editorheader span.version span.header
+{
+	padding-right: 10px;
+}
+
+editorheader span.branch
+{
+	padding: 5px 10px 5px 10px;
+	width: 100px;
+	font-size: 12px;
+	text-align: center;
+	font-weight: normal;
+	border-right: 1px solid #E8E8E8;
+	position: relative;
+}
+
+editorheader ul
+{
+	text-align: right;
+	display: inline-block;
+	position: relative;
+	float: right;
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+}
+
+editorheader li
+{
+	margin-right: 10px;
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	font-weight: bold;
+	border: 1px solid #E8E8E8;
+	display: inline-block;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-origin: padding-box;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+editorheader li.highlight:hover
+{
+
+}
+
+editorheader li:hover
+{
+	color: #FFFFFF;
+	text-shadow: rgba(0, 0, 0, 0.296875) 0px -1px 0px;
+	cursor: pointer;
+	border-top: 1px solid #518CC6;
+	border-bottom: 1px solid #2A65A0;
+	background-image: -webkit-linear-gradient(top, #599BDC, #3072B3);
+}
+
+editorfooter
+{
+	width: 55%;
+	text-align: left;
+	padding: 0 0 50px 0;
+}
+
+title
+{
+	padding: 20px 10px 10px 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+editorfooter input
+{
+	width: 100%;
+	padding: 7px;
+}
+
+div[id="inPageProgressBar"].editor
+{
+	margin-top: 60px;
+}
+
+div.ace_text-layer > div.ace_line
+{
+	font-family: Consolas, 'Liberation Mono', Courier, monospace;
+}
+
+#navigationBar2
+{
+	margin: 10px 20px 10px 20px;
+	/* width: 100%; */
+}
+
+#navigationBar2 > li
+{
+	margin: 5px 5px 5px 0;
+	padding: 5px 0 5px 0;
+	display: inline-block;
+	cursor: auto;
+}
+
+#navigationBar2 > li.navigation
+{
+	font-weight: bold;
+	color: #3399CC;
+}
+
+#navigationBar2 > li.navigationbutton
+{
+	float: right;
+	cursor: pointer;
+	
+	padding: 5px 10px 5px 10px;
+	background-image: -webkit-linear-gradient(top, #FAFAFA, #EAEAEA);
+	background-origin: padding-box;
+	background-size: auto;
+	border-bottom-color: #BCBCBC;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: #D4D4D4;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #D4D4D4;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #D4D4D4;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+
+#navigationBar2 > li.navigationbutton:hover
+{
+	color: #FFFFFF;
+	text-shadow: rgba(0, 0, 0, 0.296875) 0px -1px 0px;
+	cursor: pointer;
+	border-top: 1px solid #518CC6;
+	border-bottom: 1px solid #2A65A0;
+	border-left: none;
+	border-right: none;
+	background-image: -webkit-linear-gradient(top, #599BDC, #3072B3);
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+page.browseCode
+{
+	background-color: transparent;
+	border: none;
+}
+
+margin.browseCode
+{
+	background-color: transparent;
+	border-left: none;
+	border-right: none;
+	margin: 0;
+}
+
+main.browseCode
+{
+	border: none;
+}
+
+pages.browseCode
+{
+	background-color: transparent;
+}
+
+right.browseCode
+{
+	background-image: -webkit-linear-gradient(top, #FCFCFC, #F8F8F8);
+}

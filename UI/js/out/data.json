@@ -1,0 +1,172 @@
+{
+    "project": {},
+    "files": {
+        "branch.js": {
+            "name": "branch.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "comment.js": {
+            "name": "comment.js",
+            "modules": {},
+            "classes": {
+                "Branch": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Branch": {
+            "name": "Branch",
+            "shortname": "Branch",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "comment.js",
+            "line": 1,
+            "description": "This is the javascript class to manage Comments of users;"
+        }
+    },
+    "classitems": [
+        {
+            "file": "branch.js",
+            "line": 13,
+            "description": "The method to get branch list from back-end.",
+            "itemtype": "method",
+            "name": "getBranches",
+            "params": [
+                {
+                    "name": "username",
+                    "description": "user account",
+                    "type": "String"
+                },
+                {
+                    "name": "accesskey",
+                    "description": "a authorized token obtain from back-end",
+                    "type": "String"
+                },
+                {
+                    "name": "reponame",
+                    "description": "the name of repository",
+                    "type": "String"
+                },
+                {
+                    "name": "branchname",
+                    "description": "the name of branch to be load",
+                    "type": "String"
+                }
+            ],
+            "class": "Branch"
+        },
+        {
+            "file": "branch.js",
+            "line": 70,
+            "description": "The method to load branch list to browser.",
+            "itemtype": "method",
+            "name": "Html",
+            "class": "Branch"
+        },
+        {
+            "file": "branch.js",
+            "line": 130,
+            "description": "Hide branch list from browser",
+            "itemtype": "method",
+            "name": "hidelist",
+            "class": "Branch"
+        },
+        {
+            "file": "branch.js",
+            "line": 143,
+            "description": "display branch list from browser",
+            "itemtype": "method",
+            "name": "showlist",
+            "class": "Branch"
+        },
+        {
+            "file": "branch.js",
+            "line": 157,
+            "description": "The method to create branch",
+            "itemtype": "method",
+            "name": "createBranch",
+            "params": [
+                {
+                    "name": "username",
+                    "description": "user account",
+                    "type": "String"
+                },
+                {
+                    "name": "accesskey",
+                    "description": "a authorized token obtain from back-end",
+                    "type": "String"
+                },
+                {
+                    "name": "reponame",
+                    "description": "the name of repository",
+                    "type": "String"
+                },
+                {
+                    "name": "branchname",
+                    "description": "the name of branch to be created",
+                    "type": "String"
+                }
+            ],
+            "class": "Branch"
+        },
+        {
+            "file": "comment.js",
+            "line": 8,
+            "description": "The method to create comment.",
+            "itemtype": "method",
+            "name": "getBranches",
+            "params": [
+                {
+                    "name": "username",
+                    "description": "user account",
+                    "type": "String"
+                },
+                {
+                    "name": "accesskey",
+                    "description": "a authorized token obtain from back-end",
+                    "type": "String"
+                },
+                {
+                    "name": "reponame",
+                    "description": "the name of repository  to be located",
+                    "type": "String"
+                },
+                {
+                    "name": "branch",
+                    "description": "the name of branch to be located",
+                    "type": "String"
+                },
+                {
+                    "name": "sha",
+                    "description": "the sha of commits to be located",
+                    "type": "String"
+                },
+                {
+                    "name": "row",
+                    "description": "the row number of to be located",
+                    "type": "String"
+                },
+                {
+                    "name": "filePath",
+                    "description": "the path of file to be located",
+                    "type": "String"
+                },
+                {
+                    "name": "pageId",
+                    "description": "the id of page to be located",
+                    "type": "String"
+                }
+            ],
+            "class": "Branch"
+        }
+    ]
+}

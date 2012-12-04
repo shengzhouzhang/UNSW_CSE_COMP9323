@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>comment.js</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.7.0&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.7.0&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="..&#x2F;assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/Branch.html">Branch</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: comment.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+* This is the javascript class to manage Comments of users;
+*
+* @class Branch
+*&#x2F;
+function Comments(){
+	
+	&#x2F;**
+	* The method to create comment.
+	*
+	* @method getBranches
+	* @param {String} username user account
+	* @param {String} accesskey a authorized token obtain from back-end
+	* @param {String} reponame the name of repository  to be located
+	* @param {String} branch the name of branch to be located
+	* @param {String} sha the sha of commits to be located
+	* @param {String} row the row number of to be located
+	* @param {String} filePath the path of file to be located
+	* @param {String} pageId the id of page to be located
+	* 
+	*&#x2F;
+	this.makeComment = function(username, accesskey, reponame, branch, sha, content, row, filePath, pageId){
+		
+		var send = JSON.stringify({&quot;commentContent&quot;: content, &quot;commenterId&quot;: username, &quot;commentPosition&quot;: row, &quot;commentPath&quot;: filePath});
+		
+		$. ajax({
+			type: &quot;POST&quot;,
+        	url: rest.CommentUrl(username, accesskey, reponame, branch, sha),
+        	contentType: &quot;application&#x2F;json&quot;,
+        	dataType: &#x27;text&#x27;,
+        	data: send,
+       		success: function (data) {
+       			messagebox.show(&#x27;Comment success.&#x27;, 2000, false);
+       			var page = $(&#x27;pages &gt; page[id=&quot;&#x27; + pageId + &#x27;&quot;]&#x27;);
+       			comments.getCommentList(username, accesskey, reponame, sha, filePath, page.find(&#x27;pre&#x27;).height(), pageId);
+        	},
+   	   		error: function(){
+   	   			messagebox.show(&#x27;Comment Error.&#x27;, 2000, true);
+   	   		}
+		}); 
+	};
+	
+	this.getCommentNum = function(username, accesskey, reponame, commitsha, filePath){
+		$. ajax({
+			type: &quot;GET&quot;,
+        	url: rest.CommentListUrl(username, accesskey, reponame, commitsha),
+        	contentType: &quot;application&#x2F;json&quot;,
+        	dataType: &#x27;json&#x27;,
+       		success: function (data) {
+       			var num_of_comments = 0;
+       			$.each(data, function(key, val){
+       				console.log(val.commentPath + &#x27; filePath: &#x27; + filePath);
+       				if(val.commentPath === filePath){
+       					num_of_comments++;
+       				}
+       			});
+       			&#x2F;&#x2F;
+       			if(num_of_comments !== 0){
+       				$(&#x27;ul.commits &gt; li[id=&quot;&#x27; + commitsha + &#x27;&quot;] span.viewchanges[path=&quot;&#x27; + filePath + &#x27;&quot;]&#x27;).css(&#x27;width&#x27;, 130).prepend(&#x27;&lt;span class=&quot;numOfComments&quot;&gt;&#x27; + num_of_comments + &#x27;&lt;&#x2F;span&gt;&#x27;);
+       			}
+       		}
+		});
+	};
+	
+	this.getCommentList = function(username, accesskey, reponame, sha, filePath, editorheight, pageId){
+		var item = [];
+		
+		$. ajax({
+			type: &quot;GET&quot;,
+        	url: rest.CommentListUrl(username, accesskey, reponame, sha),
+        	contentType: &quot;application&#x2F;json&quot;,
+        	dataType: &#x27;json&#x27;,
+       		success: function (data) {
+       			console.log(&quot;getting comment&quot;);
+       			console.log(data);
+       			item.push(&#x27;&lt;ul class=&quot;comments&quot;&gt;&#x27;);
+       			$.each(data, function(key, val){
+       				console.log(val.commentPath + &#x27; filePath: &#x27; + filePath);
+       				if(val.commentPath === filePath){
+       					item.push(&#x27;&lt;li&gt;&#x27;);
+       					item.push(&#x27;&lt;div class=&quot;header&quot;&gt;&#x27;);
+       					item.push(&#x27;&lt;span class=&quot;author&quot;&gt;&#x27; + val.commiterId + &#x27;&lt;&#x2F;span&gt;&#x27;);
+       					item.push(&#x27;&lt;span&gt;commented on&lt;&#x2F;span&gt;&#x27;);
+       					item.push(&#x27;&lt;span class=&quot;file&quot;&gt;&#x27; + val.commentPath + &#x27;&lt;&#x2F;span&gt;&#x27;);
+       					item.push(val.commentPosition != 0 ? &#x27;&lt;span class=&quot;row&quot;&gt;#&#x27; + val.commentPosition + &quot;&lt;&#x2F;span&gt;&quot; : &quot;&quot;);
+       					
+       					var datetime = new Date(val.commentDate);
+       					item.push(&#x27;&lt;span class=&quot;date&quot;&gt;&#x27; + datetime.toLocaleDateString() + &#x27;&lt;&#x2F;span&gt;&#x27;);
+       					item.push(&#x27;&lt;&#x2F;div&gt;&#x27;);
+       					item.push(&#x27;&lt;p&gt;&#x27; + val.commentContent + &#x27;&lt;&#x2F;p&gt;&#x27;);
+       					item.push(&#x27;&lt;&#x2F;li&gt;&#x27;);
+       				}
+       			});
+       			item.push(&#x27;&lt;&#x2F;ul&gt;&#x27;);
+       			$(&#x27;page[id=&quot;&#x27; + pageId + &#x27;&quot;] ul.comments&#x27;).remove();
+       			tabs.append(pageId, item.join(&#x27;&#x27;), editorheight+75);
+        	},
+   	   		error: function(){
+   	   			console.log(&quot;Error: cann&#x27;t get comment list&quot;);
+   	   		},
+   	   		complete: function(){
+	   			progressbar.complete();
+   	   		}
+		}); 
+	};
+	
+	this.writer = function(id){
+		var items = [];
+		items.push(&#x27;&lt;writer id=&quot;&#x27; + id + &#x27;&quot;&gt;&#x27;);
+		items.push(&#x27;&lt;textarea&gt;&#x27;);
+		items.push(&#x27;&lt;&#x2F;textarea&gt;&#x27;);
+		items.push(&#x27;&lt;&#x2F;writer&gt;&#x27;);
+		return items.join(&#x27;&#x27;);
+	};
+	
+	this.List = function(){
+		var items = [];
+		items.push(&#x27;&lt;ul class=&quot;comments&quot;&gt;&#x27;);
+		
+&#x2F;&#x2F;		var send = {&quot;accesskey&quot;: comments.accesskey};
+&#x2F;&#x2F;		$.read(this.url, send, function (data) {
+			var json = &#x27;{&quot;name&quot;: &quot;file1&quot;,&quot;sha&quot;: &quot;e1234&quot;,&quot;comments&quot;: [{&quot;type&quot;: &quot;file&quot;,&quot;comment&quot;: &quot;There is a comment for this file.&quot;,&quot;author&quot;: &quot;szha246&quot;,&quot;date&quot;: &quot;2012-01-01 12:30:15&quot;},{&quot;type&quot;: &quot;inline&quot;,&quot;row&quot;: 5,&quot;comment&quot;: &quot;There is a comment.&quot;,&quot;author&quot;: &quot;szha246&quot;,&quot;date&quot;: &quot;2012-01-01 12:30:15&quot;},{&quot;type&quot;: &quot;inline&quot;,&quot;row&quot;: 10,&quot;comment&quot;: &quot;There is an other comment.&quot;,&quot;author&quot;: &quot;szha246&quot;,&quot;date&quot;: &quot;2012-01-01 12:30:15&quot;}]}&#x27;;
+			var data = jQuery.parseJSON(json);
+			var fileName = data.name;
+			$.each(data.comments, function(key, val) {
+				items.push(&#x27;&lt;li&gt;&lt;div class=&quot;header&quot;&gt;&lt;span class=&quot;author&quot;&gt;&#x27; + val.author + 
+						&#x27;&lt;&#x2F;span&gt;&lt;span&gt;commented on&lt;&#x2F;span&gt;&lt;span class=&quot;file&quot;&gt;&#x27; + fileName + &#x27;&lt;&#x2F;span&gt;&#x27; +
+						(val.type === &quot;inline&quot; ? &#x27;&lt;span class=&quot;row&quot;&gt;#&#x27; + val.row + &quot;&lt;&#x2F;span&gt;&quot; : &quot;&quot;) + 
+						&#x27;&lt;span class=&quot;date&quot;&gt;&#x27; + val.date + &#x27;&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&#x27;);
+				items.push(&#x27;&lt;p&gt;&#x27; + val.comment + &#x27;&lt;&#x2F;p&gt;&lt;&#x2F;li&gt;&#x27;);
+			});
+&#x2F;&#x2F;		});
+		items.push(&#x27;&lt;&#x2F;ul&gt;&#x27;);
+		&#x2F;&#x2F;console.log(items.join(&#x27;&#x27;));
+		return items.join(&#x27;&#x27;);
+	};
+	
+	this.Page = function(){
+		
+		var items = [];
+		items.push(&#x27;&lt;ul class=&quot;comments&quot;&gt;&#x27;);
+		
+		var send = {&quot;accesskey&quot;: comments.accesskey};
+		$.read(this.url, send, function (data) {
+			&#x2F;&#x2F;var json = &#x27;{&quot;name&quot;: &quot;file1&quot;,&quot;sha&quot;: &quot;e1234&quot;,&quot;comments&quot;: [{&quot;type&quot;: &quot;file&quot;,&quot;comment&quot;: &quot;There is a comment for this file.&quot;,&quot;author&quot;: &quot;szha246&quot;,&quot;date&quot;: &quot;2012-01-01 12:30:15&quot;},{&quot;type&quot;: &quot;inline&quot;,&quot;row&quot;: 5,&quot;comment&quot;: &quot;There is a comment.&quot;,&quot;author&quot;: &quot;szha246&quot;,&quot;date&quot;: &quot;2012-01-01 12:30:15&quot;},{&quot;type&quot;: &quot;inline&quot;,&quot;row&quot;: 10,&quot;comment&quot;: &quot;There is an other comment.&quot;,&quot;author&quot;: &quot;szha246&quot;,&quot;date&quot;: &quot;2012-01-01 12:30:15&quot;}]}&#x27;;
+			&#x2F;&#x2F;var data = jQuery.parseJSON(json);
+			var repoName = data.repo;
+			$.each(data.comments, function(key, val) {
+				items.push(&#x27;&lt;li&gt;&lt;div class=&quot;header&quot;&gt;&lt;span class=&quot;author&quot;&gt;&#x27; + val.author + 
+						&#x27;&lt;&#x2F;span&gt;&lt;span&gt;commented on&lt;&#x2F;span&gt;&lt;span class=&quot;file&quot;&gt;&#x27; + repoName + &#x27;&lt;&#x2F;span&gt;&#x27; + 
+						&#x27;&lt;span class=&quot;date&quot;&gt;&#x27; + val.date + &#x27;&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&#x27;);
+				items.push(&#x27;&lt;p&gt;&#x27; + val.comment + &#x27;&lt;&#x2F;p&gt;&lt;&#x2F;li&gt;&#x27;);
+			});
+			items.push(&#x27;&lt;&#x2F;ul&gt;&#x27;);
+			tabs.Insert(&quot;Comments&quot;, items.join(&#x27;&#x27;), false);
+			tabs.SelectFirst();
+		});
+	};
+	
+	
+	this.bind = function(pageId, editor){
+		var margin = 87;
+		var items = $(&#x27;pages &gt; page[id=&quot;&#x27; + pageId + &#x27;&quot;] ul.comments span.row&#x27;);
+		items.click(function(e) {
+			var row = $(this).html().slice(1);
+			var gutter = $(&#x27;pages &gt; page[id=&quot;&#x27; + pageId + &#x27;&quot;] pre &gt; div.ace_gutter &gt; div.ace_gutter-layer &gt; div.ace_gutter-cell :eq(&#x27; + (row-1) + &#x27;)&#x27;);
+			$(&#x27;html, body&#x27;).scrollTop(gutter.offset().top-margin);
+			editor.gotoLine(row, 0, false);
+		});
+		
+		items.hover(function(e) {
+			items.append();
+		});
+
+	};
+}
+
+var comments = new Comments();
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

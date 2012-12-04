@@ -1,0 +1,18 @@
+{
+	"user": "szha246",
+	"course": "COMP9323",
+	"repositories": [
+	    {
+	        "sha": "1",
+	        "name": "Assignment 1"
+	    },
+	    {
+	        "sha": "2",
+	        "name": "Assignment 2"
+	    },
+	    {
+	        "sha": "3",
+	        "name": "Assignment 3"
+	    }
+	]
+}

@@ -1,0 +1,58 @@
+/*
+	Tags.html CSS file
+*/
+
+
+/* = Tags
+--------------------------------------------------------------------------------*/
+
+.tags
+{
+	margin: 10px auto 20px auto;
+	width: 90%;
+	background-color: #FFFFFF;
+	text-align: left;
+	border-bottom: 1px solid #E8E8E8;
+}
+
+.tags table
+{
+	width: 100%;
+}
+
+.tags table tr
+{
+	width: 100%;	
+}
+
+.tags img
+{
+	height: 15px;
+	width: 15px;
+}
+
+.tags .file
+{
+	padding: 10px 20px 10px 15px;
+	text-align: left;
+	border-top: 1px solid #E8E8E8;
+}
+
+.tags .file a
+{
+	margin: 0 0 0 10px;
+	text-decoration: none;
+	color: #3366CC;
+	font-weight: bold;
+}
+
+.tags .file .message
+{
+	margin: 0 0 0 10px;
+}
+
+.tags .date
+{
+	float: right;
+	font-size: 10px;
+}

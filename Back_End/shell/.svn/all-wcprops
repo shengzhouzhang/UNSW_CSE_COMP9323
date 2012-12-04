@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell
+END
+lectures.pl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/lectures.pl
+END
+commitFiles.sh
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/commitFiles.sh
+END
+deleteBranch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/deleteBranch.sh
+END
+createBranch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/createBranch.sh
+END
+deleteFile.sh
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/deleteFile.sh
+END
+init.sh
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/init.sh
+END
+createFile.sh
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/createFile.sh
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/README.md
+END
+updateRepoFolder.sh
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/143/trunk/%20code-management-cs9323%20--username%20btxiaox@gmail.com/shell/updateRepoFolder.sh
+END
