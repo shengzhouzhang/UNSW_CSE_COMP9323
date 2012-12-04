@@ -1,0 +1,13 @@
+This is the assignment project for UNSW COMP9323 2012 S2.
+
+For practice of using thrid party APIs and open-source code, we developed a github like application for campus use.
+
+Students are able to manage their repository, browsing folders and codes, and rollback to any history version. 
+
+Our front-end is implemented with pure HTML5, CSS3, and jQuery, calls back-end restful service with jQuery Ajax. 
+
+We integrates ACE Editor (Please see http://ace.ajax.org/) to present Codes and jQuery UI to enrich interface. 
+
+Our back-end integrates github API and is restful.
+
+Technique involved: HTML5, CSS3, jQuery, and jQuery UI -- front-end; Github APIs and Jersey rest -- back-end.
